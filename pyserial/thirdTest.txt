@@ -1,0 +1,106 @@
+C:\Users\jvgcalites\anaconda3\envs\pyserial\python.exe C:/Users/jvgcalites/PycharmProjects/pyserial/test1.py
+Data=[70250.0, 23946.7, 33103.45, 27743.73, 68852.46, 245.0, -717.0, -170.0, 15864.0, -3652.0, 1788.0], Predicted: S
+Is the predicted label correct? (y/n): n
+Enter the correct label: E
+Data=[75798.82, 22426.83, 30943.12, 31359.52, 52599.12, 35.0, -309.0, -34.0, 15176.0, -5476.0, 1952.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[58774.04, 20194.95, 28593.75, 25275.59, 71207.87, -1746.0, -543.0, 802.0, 15744.0, -3896.0, 4812.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[65340.31, 20603.25, 28593.75, 25275.59, 64921.88, -4389.0, 1570.0, -93.0, 14864.0, -5888.0, 4064.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[61343.28, 22245.15, 29221.9, 30000.0, 61343.28, 2.0, -153.0, -79.0, 15756.0, -4856.0, 1564.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[69313.19, 20686.05, 29478.26, 24045.8, 82738.85, 156.0, -725.0, 56.0, 16336.0, -3452.0, 2060.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[64097.94, 21105.88, 27625.0, 25488.13, 81509.44, 514.0, 20.0, -360.0, 16344.0, -3072.0, 1020.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[58071.43, 20520.83, 29868.42, 24045.8, 64921.88, 39.0, -149.0, -57.0, 16228.0, -3524.0, 2412.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[65340.31, 22702.7, 30265.49, 30265.49, 63692.31, -94.0, 56.0, 327.0, 16028.0, -4220.0, 2068.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[56372.09, 20603.25, 27389.5, 24753.88, 69779.01, 47.0, -853.0, -61.0, 15956.0, -2688.0, 1584.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[59130.43, 21535.71, 30805.97, 28968.48, 59130.43, 99.0, -338.0, -240.0, 16356.0, -3924.0, 1856.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[59490.29, 19175.95, 28717.95, 24346.15, 75798.82, -642.0, -175.0, -136.0, 16152.0, -2904.0, 4084.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[56705.61, 19405.83, 27389.5, 24245.52, 75798.82, -736.0, -164.0, -154.0, 16012.0, -2500.0, 4116.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[56041.67, 19252.23, 28347.46, 24045.8, 64507.77, -109.0, -106.0, 1.0, 16024.0, -2576.0, 3936.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[60220.59, 19252.23, 27506.93, 24145.41, 72685.71, -242.0, -47.0, -115.0, 16200.0, -2596.0, 4000.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[62500.0, 22702.7, 29607.56, 30132.36, 61725.0, 149.0, 132.0, -293.0, 16136.0, -3200.0, 1592.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[58774.04, 19560.81, 28968.48, 24245.52, 76886.23, -163.0, -319.0, -130.0, 16528.0, -1656.0, 3644.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[70726.26, 21191.04, 28103.93, 30805.97, 60591.13, 793.0, -536.0, -477.0, 15916.0, -3724.0, 3364.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[58774.04, 20034.25, 29737.61, 22610.29, 74215.13, 64.0, -405.0, -186.0, 16236.0, -2568.0, 4496.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[59490.29, 20520.83, 28103.93, 23946.7, 71694.91, 48.0, -302.0, -202.0, 16052.0, -2744.0, 4784.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[72187.5, 22245.15, 28347.46, 30399.41, 62110.55, 230.0, 13.0, -154.0, 16284.0, -3032.0, 2608.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[55389.91, 20275.86, 29737.61, 24245.52, 71207.87, -685.0, -682.0, 404.0, 16360.0, -1980.0, 3016.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[55714.29, 19954.44, 28347.46, 23652.39, 72685.71, -240.0, 67.0, 465.0, 16156.0, -2748.0, 4260.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[58421.05, 20603.25, 28842.86, 25065.28, 69779.01, 367.0, -483.0, -226.0, 15960.0, -2968.0, 3204.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[72187.5, 22065.22, 29478.26, 30669.64, 64097.94, -283.0, -379.0, -136.0, 16204.0, -3020.0, 3256.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[57382.08, 20275.86, 29478.26, 22982.67, 64507.77, 272.0, -348.0, -333.0, 16336.0, -2024.0, 3064.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[70726.26, 21535.71, 27156.59, 29094.83, 58421.05, 321.0, -595.0, -315.0, 16000.0, -3576.0, 2572.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[70726.26, 21448.93, 28347.46, 29478.26, 52599.12, 20.0, 10.0, -163.0, 16152.0, -3412.0, 2948.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[58774.04, 21535.71, 31359.52, 25170.16, 76886.23, -448.0, -567.0, 681.0, 16228.0, -1972.0, 3844.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[60591.13, 21535.71, 30132.36, 24960.94, 61343.28, 791.0, -387.0, -273.0, 15508.0, -2944.0, 4552.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[54434.39, 20438.8, 28225.35, 24145.41, 65340.31, 307.0, 38.0, -172.0, 15708.0, -2904.0, 3232.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[59490.29, 20194.95, 27389.5, 22702.7, 63692.31, 185.0, -256.0, -168.0, 15532.0, -2944.0, 3684.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[68852.46, 21710.53, 27506.93, 29221.9, 60965.34, 449.0, -337.0, -393.0, 15512.0, -3616.0, 1792.0], Predicted: S
+Is the predicted label correct? (y/n):
+ULET
+Data=[56372.09, 19175.95, 26698.37, 22245.15, 64507.77, -2161.0, -414.0, 455.0, 15988.0, -3064.0, 5904.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[69779.01, 21710.53, 28225.35, 30265.49, 48409.09, -177.0, -755.0, -269.0, 15556.0, -4228.0, 1756.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[60591.13, 19795.92, 27272.73, 23171.64, 61343.28, -454.0, 261.0, -199.0, 15952.0, -3896.0, 4248.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[62500.0, 21276.6, 27041.1, 25275.59, 32655.28, -816.0, -287.0, -342.0, 16296.0, -3776.0, 2144.0], Predicted: A
+Is the predicted label correct? (y/n): y
+Data=[60965.34, 19875.0, 26585.37, 22065.22, 54434.39, 286.0, -395.0, -186.0, 16316.0, -3380.0, 3856.0], Predicted: N
+Is the predicted label correct? (y/n): e
+ULET
+Data=[61343.28, 21021.13, 28593.75, 25170.16, 78567.07, -831.0, -1025.0, 5.0, 16004.0, -2960.0, 1808.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[61343.28, 20520.83, 28347.46, 24753.88, 72685.71, 601.0, 8.0, -318.0, 16140.0, -3540.0, 2564.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[59130.43, 20194.95, 27506.93, 23555.27, 59490.29, 133.0, -265.0, -177.0, 15836.0, -4120.0, 4004.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[60965.34, 20194.95, 28103.93, 23848.1, 71207.87, 305.0, -45.0, -95.0, 15864.0, -4260.0, 1324.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[73189.65, 23652.39, 29737.61, 31359.52, 59130.43, -740.0, -60.0, 182.0, 15492.0, -4528.0, 4452.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[61343.28, 21535.71, 28225.35, 28842.86, 65340.31, 183.0, -63.0, -89.0, 15644.0, -4072.0, 4684.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[55389.91, 19328.86, 27863.13, 23946.7, 71694.91, 82.0, -214.0, 66.0, 16128.0, -3160.0, 3416.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[64097.94, 21887.02, 27389.5, 30000.0, 50297.87, 874.0, -729.0, -884.0, 15396.0, -5076.0, 2108.0], Predicted: S
+Is the predicted label correct? (y/n): y
+Data=[52599.12, 18799.56, 27041.1, 23171.64, 71694.91, 413.0, -385.0, -184.0, 16164.0, -2676.0, 3724.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[70726.26, 21448.93, 27389.5, 25275.59, 35980.07, -1457.0, -438.0, -588.0, 16280.0, -3508.0, 3380.0], Predicted: A
+Is the predicted label correct? (y/n): y
+Data=[53504.46, 19483.14, 26926.23, 21887.02, 65763.16, 25.0, -308.0, -85.0, 15928.0, -3068.0, 4652.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Data=[58774.04, 19328.86, 26472.97, 22982.67, 68396.74, 54.0, -459.0, -137.0, 15700.0, -3064.0, 5004.0], Predicted: E
+Is the predicted label correct? (y/n): y
+Correct Predictions: 47
+Wrong Predictions: 1
