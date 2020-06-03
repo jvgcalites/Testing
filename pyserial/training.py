@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 ser = serial.Serial('COM5', baudrate=9600, timeout=1)
-sampleData = 45  # 30 samples per label
+sampleData = 10  # 30 samples per label
 dataPoint = list(range(1, sampleData + 1, 1))
 print(dataPoint)
 
