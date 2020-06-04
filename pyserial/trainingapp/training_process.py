@@ -95,19 +95,17 @@ def training_process(filename, k):
         temp = [key, value]
         dictList.append(temp)
 
-    recordList = list()
-    dataPoint = list()
-    label_list = []
-    label_list.append(['A', 0, 0])
-    correctPrediction = 0
-    wrongPrediction = 0
+    record_list = list()
+    label_list = [['A', 0, 0]]
+    correct_prediction = 0
+    wrong_prediction = 0
 
     # define model parameter
     num_neighbors = k
     ser = serial.Serial('COM5', baudrate=9600, timeout=1)
-    trainNum = 10
+    train_num = 10
     i = 0
-    while i < trainNum:
+    while i < train_num:
         raw_data = ser.readline().decode('ascii')
         if raw_data != "":
             i += 1
@@ -134,60 +132,59 @@ def training_process(filename, k):
             row = [f1, f2, f3, f4, f5, gx, gy, gz, ax, ay, az]
             # predict the label
             label = predict_classification(dataset, row, num_neighbors)
-            predictLabel = ''
+            predict_label = ''
             for x in dictList:
                 if x[1] == label:
-                    predictLabel = x[0]
-            print('Data=%s, Predicted: %s' % (row, predictLabel))
+                    predict_label = x[0]
+            print('Data=%s, Predicted: %s' % (row, predict_label))
 
             # ask if the label is correct
             validate = input("Is the predicted label correct? (y/n): ")
             if validate == 'y':
                 # store it in a file
                 f = open(filename, "a+")
-                f.write("%s,%s\n" % (data, predictLabel))
+                f.write("%s,%s\n" % (data, predict_label))
                 f.close()
-                correctPrediction += 1
+                correct_prediction += 1
                 # =========Saving label ==============
                 label_exists = False
                 # traverse through the list and check if label already exists
                 for label in label_list:
-                    if label[0] == predictLabel:
+                    if label[0] == predict_label:
                         label_exists = True
                         index = label_list.index(label)
                 # check if the label is in the list
                 if label_exists:
-                    label_list[index] = [predictLabel, label_list[index][1] + 1, label_list[index][2] + 1]
+                    label_list[index] = [predict_label, label_list[index][1] + 1, label_list[index][2] + 1]
                 else:
-                    label_list.append([predictLabel, 1, 1])
+                    label_list.append([predict_label, 1, 1])
             # add the value
             elif validate == 'n':
                 # store it in a separate file
-                correctLabel = input("Enter the correct label: ")
+                correct_label = input("Enter the correct label: ")
                 # store it in a file
                 f = open(filename, "a+")
-                f.write("%s,%s\n" % (data, correctLabel))
+                f.write("%s,%s\n" % (data, correct_label))
                 f.close()
-                wrongPrediction += 1
+                wrong_prediction += 1
                 # =========Saving label ==============
                 label_exists = False
                 # traverse through the list
                 for label in label_list:
-                    if label[0] == correctLabel:
+                    if label[0] == correct_label:
                         label_exists = True
                         index = label_list.index(label)
                 # check if the label is in the list
                 if label_exists:
-                    label_list[index] = [correctLabel, label_list[index][1], label_list[index][2] + 1]
+                    label_list[index] = [correct_label, label_list[index][1], label_list[index][2] + 1]
                 else:
                     # if the label is not in the list
-                    label_list.append([correctLabel, 0, 1])
+                    label_list.append([correct_label, 0, 1])
             else:
-                print("ULET")
+                print("Data not saved")
 
-            recordList.append(wrongPrediction)
+            record_list.append(wrong_prediction)
 
-    dataPoint = list(range(1, len(recordList) + 1, 1))
-    print("Correct Predictions: %s" % correctPrediction)
-    print("Wrong Predictions: %s" % wrongPrediction)
+    print("Correct Predictions: %s" % correct_prediction)
+    print("Wrong Predictions: %s" % wrong_prediction)
     return label_list

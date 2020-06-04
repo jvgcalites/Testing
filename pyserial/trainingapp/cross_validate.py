@@ -15,6 +15,7 @@ def load_csv(filename):
             dataset.append(row)
     return dataset
 
+
 # Convert string column to float
 def str_column_to_float(dataset, column):
     for row in dataset:
