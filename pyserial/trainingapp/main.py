@@ -1,6 +1,6 @@
 from cross_validate import *
 from training_process import *
-from database import dataAccess
+# from database import dataAccess
 import os
 
 DATASET_FILE_DIRECTORY = "C:/Users/jvgcalites/Documents/GitHub/Testing/pyserial/trainingapp/datasets/"
@@ -57,7 +57,8 @@ if __name__ == '__main__':
         print("========================================================================================")
         project_name = input("Enter the name of the project : ")
         dataset_file = choose_dataset_file()
-        save_project(project_name, dataset_file)
+        # TODO
+        project_id = save_project(project_name, dataset_file)
     if response == "2":
         open_existing_project()
 
@@ -68,6 +69,7 @@ if __name__ == '__main__':
 
     print("========================================================================================")
     test_name = input("Give a new test name: ")
+    test_id = save_test(test_name, project_id)
     while test_name != "x":
         # returns a 2d list of labels and its prediction ratio
         label_list = training_process(dataset_file, k)
@@ -80,6 +82,7 @@ if __name__ == '__main__':
         save_data = input("Should we save the file?")
         if save_file == "y":
             # TODO
-            save_data(test_name, label_list, accuracy_list)
+            save_data(test_id, label_list, accuracy_list)
         print("========================================================================================")
         test_name = input("Give a new test name: ")
+        test_id = save_test(test_id, project_id)
