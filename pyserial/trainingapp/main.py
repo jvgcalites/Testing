@@ -7,7 +7,7 @@ DATASET_FILE_DIRECTORY = "C:/Users/jvgcalites/Documents/GitHub/Testing/pyserial/
 
 
 def open_existing_project():
-    # TODO
+    # TODO :
     # show all the projects available
     da = dataAccess()
     project_list = da.call_get_all_project()

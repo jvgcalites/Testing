@@ -12,53 +12,57 @@ class dataAccess(object):
     def call_get_all_project(self):
         try:
             self.cursor.callproc('get_all_project')
-
             # print out the result
             for result in self.cursor.stored_results():
-                print(result.fetchall())
-
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_get_all_test(self):
         try:
             self.cursor.callproc('get_all_test')
             for result in self.cursor.stored_results():
-                print(result.fetchall())
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_get_all_k(self):
         try:
             self.cursor.callproc('get_all_k')
             for result in self.cursor.stored_results():
-                print(result.fetchall())
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_get_all_label(self):
         try:
             self.cursor.callproc('get_all_label')
             for result in self.cursor.stored_results():
-                print(result.fetchall())
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_get_all_k_test(self):
         try:
             self.cursor.callproc('get_all_k_test')
             for result in self.cursor.stored_results():
-                print(result.fetchall())
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_get_all_label_test(self):
         try:
             self.cursor.callproc('get_all_label_test')
             for result in self.cursor.stored_results():
-                print(result.fetchall())
+                rows = result.fetchall()
         except Error as e:
             print(e)
+        return rows
 
     def call_add_project(self, project, dataset_file):
         proc_name = 'add_project'
@@ -100,9 +104,9 @@ class dataAccess(object):
         except Error as e:
             print(e)
 
-    def call_add_label_test(self, test_id, label_id, right_predict, total_predict):
+    def call_add_label_test(self, test_id, label_name, right_predict, total_predict):
         proc_name = 'add_label_test'
-        args = (test_id, label_id, right_predict, total_predict)
+        args = (test_id, label_name, right_predict, total_predict)
         try:
             self.cursor.callproc(proc_name, args)
             print(self.cursor.rowcount, " record inserted")
@@ -110,9 +114,9 @@ class dataAccess(object):
         except Error as e:
             print(e)
 
-    def call_add_k_test(self, test_id, k_id, accuracy):
+    def call_add_k_test(self, test_id, k_sample, accuracy):
         proc_name = 'add_k_test'
-        args = (test_id, k_id, accuracy)
+        args = (test_id, k_sample, accuracy)
         try:
             self.cursor.callproc(proc_name, args)
             print(self.cursor.rowcount, " record inserted")
@@ -124,20 +128,23 @@ class dataAccess(object):
         self.conn.close()
         self.cursor.close()
 
-
 if __name__ == '__main__':
     da = dataAccess()
-    # da.call_add_project("testProject", "data.txt")
-    # da.call_add_test("testTest", 1)
-    # da.call_add_label('A')
-    # da.call_add_k(1)
-    # da.call_add_label_test(2, 1, 1, 2)
-    # da.call_add_k_test(2, 1, 97.012)
-    da.call_get_all_project()
-    da.call_get_all_k()
-    da.call_get_all_k_test()
-    da.call_get_all_label()
-    da.call_get_all_label_test()
-    da.call_get_all_test()
+    da.call_add_label_test(1, 'A', 1, 2)
 
-    da.close_database()
+# if __name__ == '__main__':
+#     da = dataAccess()
+#     da.call_add_project("testProject", "data.txt")
+#     da.call_add_test("testTest", 1)
+#     da.call_add_label('A')
+#     da.call_add_k(1)
+#     da.call_add_label_test(2, 1, 1, 2)
+#     da.call_add_k_test(2, 1, 97.012)
+#     da.call_get_all_project()
+#     da.call_get_all_k()
+#     da.call_get_all_k_test()
+#     da.call_get_all_label()
+#     da.call_get_all_label_test()
+#     da.call_get_all_test()
+#
+#     da.close_database()
