@@ -1,10 +1,17 @@
-from database import *
+from database import dataAccess
 
 
 class training_app:
 
     def __init__(self):
         self.da = dataAccess()
+
+    def show_all_projects(self):
+        project_list = self.da.call_get_all_project()
+        print(project_list)
+        for project in project_list:
+            print("[%s] %s %s" % (project_list.index(project), project[1], project[3]))
+        return project_list
 
     # save a project, then return the project id
     def save_project(self, project_name, dataset_file):
@@ -25,7 +32,6 @@ class training_app:
             if test[1] == test_name:
                 if test[2] == project_id:
                     test_id = test[0]
-                    print(test_id)
         return test_id
 
     # save the list of label and its right and total prediction in label_test table
@@ -65,10 +71,11 @@ class training_app:
             self.da.call_add_k_test(test_id, k_test[0], k_test[1])
 
 
-if __name__ == '__main__':
-    ta = training_app()
-    #ta.save_k_test(9, [[1, 99.243], [3, 99.243], [5, 99.243], [7, 99.243], [9, 99.243]])
-    #ta.save_label_test(9, [['A', 5, 5], ['B', 5, 5], ['C', 5, 5], ['D', 5, 5], ['E', 5, 5], ])
+# if __name__ == '__main__':
+#     ta = training_app()
+#     ta.show_all_projects()
+    # ta.save_k_test(9, [[1, 99.243], [3, 99.243], [5, 99.243], [7, 99.243], [9, 99.243]])
+    # ta.save_label_test(9, [['A', 5, 5], ['B', 5, 5], ['C', 5, 5], ['D', 5, 5], ['E', 5, 5], ])
 
 
 
