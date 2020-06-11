@@ -142,7 +142,7 @@ def cross_validate(filename):
     # convert class column to integers
     str_column_to_int(dataset, len(dataset[0]) - 1)
     mean_accuracy = []
-    num_k = 10
+    num_k = 20
     x = 1
     while x < num_k:
         n_folds = 10

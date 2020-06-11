@@ -84,6 +84,20 @@ def predict_classification(train, test_row, num_neighbors):
     return prediction
 
 
+def record_wrong_predictions(filename, data, correct_label):
+    # store it in a file
+    f = open(filename, "a+")
+    f.write("%s,%s\n" % (data, correct_label))
+    f.close()
+
+
+def add_separate_line(filename):
+    f = open(filename, "a+")
+    f.write("===================================================================")
+    f.close()
+
+
+
 def training_process(filename, k):
     dataset = load_csv(filename)
     for i in range(len(dataset[0]) - 1):
@@ -103,9 +117,9 @@ def training_process(filename, k):
     # define model parameter
     num_neighbors = k
     ser = serial.Serial('COM5', baudrate=9600, timeout=1)
-    train_num = 10
+    validate = ""
     i = 0
-    while i < train_num:
+    while validate != "xxx":
         raw_data = ser.readline().decode('ascii')
         if raw_data != "":
             i += 1
@@ -167,6 +181,8 @@ def training_process(filename, k):
                 f.write("%s,%s\n" % (data, correct_label))
                 f.close()
                 wrong_prediction += 1
+                # ================= added shit ==================
+                record_wrong_predictions("wrong.txt", data, correct_label)
                 # =========Saving label ==============
                 label_exists = False
                 # traverse through the list
@@ -185,6 +201,7 @@ def training_process(filename, k):
 
             record_list.append(wrong_prediction)
 
+    add_separate_line("wrong.txt")
     print("Correct Predictions: %s" % correct_prediction)
     print("Wrong Predictions: %s" % wrong_prediction)
     return label_list

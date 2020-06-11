@@ -1,7 +1,6 @@
 from cross_validate import *
 from training_process import *
 from training_app import training_app
-# from database import dataAccess
 import os
 
 DATASET_FILE_DIRECTORY = "C:/Users/jvgcalites/Documents/GitHub/Testing/pyserial/trainingapp/datasets/"
@@ -20,11 +19,11 @@ def choose_dataset_file():
     while 0 > file_select > len(entries) - 1:
         file_select = int(input("Invalid response. Please try again : "))
     file_selected = entries[file_select]
-    return file_selected
+    complete_file_name = os.path.join(DATASET_FILE_DIRECTORY, file_selected)
+    return complete_file_name
 
 
 def choose_existing_project(existing_projects):
-    print(existing_projects)
     chosen_project = int(input("Select an existing project : "))
     while 0 > chosen_project > len(existing_projects) - 1:
         chosen_project = int(input("Invalid response. Please try again"))
