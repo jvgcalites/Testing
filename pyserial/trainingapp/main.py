@@ -7,8 +7,7 @@ DATASET_FILE_DIRECTORY = "C:/Users/jvgcalites/Documents/GitHub/Testing/pyserial/
 
 
 def show_line():
-    print("===========================================================================================================")
-
+    print("===================================================================================")
 
 def choose_dataset_file():
     show_line()

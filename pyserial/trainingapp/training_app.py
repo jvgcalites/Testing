@@ -20,7 +20,6 @@ class training_app:
         for project in project_list:
             if project[1] == project_name:
                 project_id = project[0]
-                print(project[0])
         return project_id
 
     # save a test, then return the test id

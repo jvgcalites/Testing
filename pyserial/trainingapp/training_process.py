@@ -150,11 +150,12 @@ def training_process(filename, k):
             for x in dictList:
                 if x[1] == label:
                     predict_label = x[0]
-            print('Data=%s, Predicted: %s' % (row, predict_label))
+            # print('Data=%s, Predicted: %s' % (row, predict_label))
+            print('Predicted: %s' % predict_label)
 
             # ask if the label is correct
-            validate = input("Is the predicted label correct? (y/n): ")
-            if validate == 'y':
+            validate = input("Is the predicted label correct? (Y/N): ")
+            if validate == 'Y':
                 # store it in a file
                 f = open(filename, "a+")
                 f.write("%s,%s\n" % (data, predict_label))
@@ -173,7 +174,7 @@ def training_process(filename, k):
                 else:
                     label_list.append([predict_label, 1, 1])
             # add the value
-            elif validate == 'n':
+            elif validate == 'N':
                 # store it in a separate file
                 correct_label = input("Enter the correct label: ")
                 # store it in a file

@@ -92,7 +92,6 @@ def evaluate_algorithm(dataset, algorithm, n_folds, *args):
         actual = [row[-1] for row in fold]
         accuracy = accuracy_metric(actual, predicted)
         scores.append(accuracy)
-
     return scores
 
 
@@ -142,17 +141,19 @@ def cross_validate(filename):
     # convert class column to integers
     str_column_to_int(dataset, len(dataset[0]) - 1)
     mean_accuracy = []
-    num_k = 20
+    num_k = 30
     x = 1
+    n_folds = 10
+    # show the number of folds and
+    print("Performing %s-fold cross validation" % n_folds)
     while x < num_k:
-        n_folds = 10
         num_neighbors = x
         scores = evaluate_algorithm(dataset, k_nearest_neighbors, n_folds, num_neighbors)
         accuracy = sum(scores) / float(len(scores))
         mean_accuracy.append([x, accuracy])
-        print('================== K = %s ==================' % x)
-        print('Scores: %s' % scores)
-        print('Mean Accuracy: %.3f%%' % (sum(scores) / float(len(scores))))
+        print('K = %s ; Mean Accuracy: %.3f%%' % (x, sum(scores) / float(len(scores))))
+        # print('Scores: %s' % scores)
+        # print('Mean Accuracy: %.3f%%' % (sum(scores) / float(len(scores))))1
         x = x + 2
     return mean_accuracy
 
