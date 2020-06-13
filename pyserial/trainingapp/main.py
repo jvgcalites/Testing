@@ -71,17 +71,17 @@ if __name__ == '__main__':
 
     show_line()
     test_name = input("Give a new test name: ")
-    while test_name != "x":
+    while test_name != "X":
         # returns a 2d list of labels and its prediction ratio
         label_list = training_process(dataset_file, optimal_k)
         print(label_list)
 
         # returns list of accuracy for each K
         accuracy_list = cross_validate(dataset_file)
-        show_optimal_k(accuracy_list)
+        optimal_k = show_optimal_k(accuracy_list)
 
         save_data = input("Should we save the file?")
-        if save_data == "y":
+        if save_data == "Y":
             test_id = ta.save_test(test_name, project_id)
             ta.save_label_test(test_id, label_list)
             ta.save_k_test(test_id, accuracy_list)
