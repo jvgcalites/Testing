@@ -83,6 +83,20 @@ def predict_classification(train, test_row, num_neighbors):
     prediction = max(set(output_values), key=output_values.count)
     return prediction
 
+
+def record_wrong_predictions(filename, data, correct_label):
+    # store it in a file
+    f = open(filename, "a+")
+    f.write("%s,%s\n" % (data, correct_label))
+    f.close()
+
+
+def add_separate_line(filename):
+    f = open(filename, "a+")
+    f.write("===================================================================")
+    f.close()
+
+
 def training_process(filename, k):
     dataset = load_csv(filename)
     for i in range(len(dataset[0]) - 1):
@@ -141,6 +155,10 @@ def training_process(filename, k):
             # ask if the label is correct
             validate = input("Is the predicted label correct? (Y/N): ")
             if validate == 'Y':
+                # store it in a file
+                f = open(filename, "a+")
+                f.write("%s,%s\n" % (data, predict_label))
+                f.close()
                 correct_prediction += 1
                 # =========Saving label ==============
                 label_exists = False
@@ -163,6 +181,8 @@ def training_process(filename, k):
                 f.write("%s,%s\n" % (data, correct_label))
                 f.close()
                 wrong_prediction += 1
+                # ================= added shit ==================
+                record_wrong_predictions("wrong.txt", data, correct_label)
                 # =========Saving label ==============
                 label_exists = False
                 # traverse through the list
@@ -183,6 +203,7 @@ def training_process(filename, k):
 
             record_list.append(wrong_prediction)
 
+    add_separate_line("wrong.txt")
     print("Correct Predictions: %s" % correct_prediction)
     print("Wrong Predictions: %s" % wrong_prediction)
     return label_list
