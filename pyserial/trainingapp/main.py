@@ -66,8 +66,9 @@ if __name__ == '__main__':
 
     show_line()
     # returns list of accuracy for each K
-    accuracy_list = cross_validate(dataset_file)
-    optimal_k = show_optimal_k(accuracy_list)
+    # accuracy_list = cross_validate(dataset_file)
+    # optimal_k = show_optimal_k(accuracy_list)
+    optimal_k = 3
 
     show_line()
     test_name = input("Give a new test name: ")
